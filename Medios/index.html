@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Inversión - Banco SENA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+
+    <section id="simulator">
+        <h1>SIMULADOR DE INVERSIÓN</h1>
+        <div class="cont-flex">
+            <div class="left">
+                <h2>Datos Inversionista</h2>
+                <p>Con el tiempo y el monto que quieres invertir podrás simular las condiciones aproximadas de tu inversión.</p>
+
+                <form>
+                    <div class="form">
+                        <div class="group-data two-columns">
+                            <label for="#">Nombres y Apellidos:</label>
+                            <input type="text" placeholder="Escribe aquí" id="fullname_input">
+                        </div>
+                        <div class="group-data two-columns">
+                            <label for="#">Teléfono:</label>
+                            <input type="number" placeholder="Escribe aquí">
+                        </div>
+                        <div class="group-data one-column">
+                            <label for="#">Email:</label>
+                            <input type="email" placeholder="Escribe aquí" id="email_input">
+                        </div>
+                        <div class="group-data two-columns">
+                            <label for="#">Monto a Invertir:</label>
+                            <input type="number" placeholder="Escribe aquí" id="amount_input">
+                        </div>
+                        <div class="group-data two-columns">
+                            <label for="#">Tiempo de Inversión:</label>
+                            <select id="time_input">
+                                <option>Elige una opción</option>
+                                <option value="12">1 Año</option>
+                                <option value="24">2 Años</option>
+                                <option value="36">3 Años</option>
+                            </select>
+                        </div>
+    
+                        <button>CALCULAR</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="right">
+                <div class="pre-simulation  ">
+                    <img src="img/img-simulator.svg" alt="">
+                </div>
+                <!-- La clase disabled debe ponerse en el contendor anterior para mostrar el resultado -->
+                <div class="post-simulation  disabled">
+                    <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span> <span id="time"></span> MESES</span> te pagaremos el <span id="average"></span> de interés mensual.</h3>
+
+                    <div class="total ">
+                        <h4>Recibiras un total de:</h4>
+                        <h2>$ <span id="total_amount"></span></h2>
+                        <p>Ganancia:$ <span id="ganancia"></span></p>
+                        
+                    </div>
+
+                    <div class="notificacion">
+                        <h5>Señor(a) <span id="fullname">Nombres y apellidos</span> a tu correo electrónico <span id="email">correo@gmail.com</span> hemos enviado las condiciones de nuestro servicio.</h5>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
